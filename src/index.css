@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 0% 96%; /* #F5F5F5 off-white as base */
+    --foreground: 0 0% 17%; /* #2B2B2B modern-grey */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 181 100% 41%; /* HSL for #00CED1 */
+    --primary-foreground: 0 0% 17%; /* #2B2B2B modern-grey */
+    --secondary: 0 0% 55%; /* #8C8C8C slate-grey */
+    --secondary-foreground: 0 0% 96%; /* #F5F5F5 off-white */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9.8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 17% / 0.1;
+    --input: 0 0% 89.8%;
+    --ring: 181 100% 41%; /* HSL for #00CED1 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 5.5%; /* #0E0E0E charcoal-black */
+    --foreground: 0 0% 96%; /* #F5F5F5 off-white */
+    --card: 0 0% 11%; /* #1C1C1C deep-graphite */
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 5.5%;
+    --popover-foreground: 0 0% 96%;
+    --secondary: 0 0% 17%; /* #2B2B2B modern-grey */
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --border: 0 0% 17%;
+    --input: 0 0% 17%;
+    --ring: 181 100% 41%; /* HSL for #00CED1 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Cantarell', sans-serif;
+    font-weight: 400; /* Ubuntu Regular */
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    font-weight: 700; /* Ubuntu Bold */
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+    font-weight: 500; /* Ubuntu Medium */
+  }
+
+  h3 {
+    @apply text-xl;
+    font-weight: 500; /* Ubuntu Medium */
+  }
+
+}
+
+@layer components {
+  .tagline {
+    @apply text-xl font-bold;
+  }
+  .tagline-lg {
+    @apply text-2xl font-bold;
+  }
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
